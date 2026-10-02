@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>South C Connect</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+    <div class="logo">
+        <span class="logo-icon">SC</span>
+        <span>South C Connect</span>
+    </div>
+
+    <small>Your community platform</small>
+        </div>
+
+        <>
+            <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+<nav id="mainNav">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#events">Events</a>
+    <a href="#directory">Directory</a>
+    <a href="#places">Places</a>
+    <a href="#emergency">Emergency</a>
+  <a href="#about">About</a>
+</nav>
+      <a href="#gallery">Gallery</a>
+    </header>
+
+    <main>
+
+        <section id="home" class="hero">
+            <h1>Welcome to South C</h1>
+
+            <p>
+                Your community. Your information. Your South C.
+            </p>
+
+            <button onclick="showMessage()">
+                Explore South C
+            </button>
+        </section>
+<section class="features">
+
+    <div class="feature-card" onclick="goToSection('news')">
+        <div class="feature-icon">📰</div>
+        <h3>News</h3>
+        <p>Stay updated with community information.</p>
+    </div>
+
+    <div class="feature-card" onclick="goToSection('events')">
+        <div class="feature-icon">📅</div>
+        <h3>Events</h3>
+        <p>Discover activities happening around South C.</p>
+    </div>
+
+    <div class="feature-card" onclick="goToSection('directory')">
+        <div class="feature-icon">🔎</div>
+        <h3>Directory</h3>
+        <p>Find useful businesses and services.</p>
+    </div>
+
+    <div class="feature-card" onclick="goToSection('places')">
+        <div class="feature-icon">📍</div>
+        <h3>Places</h3>
+        <p>Explore important places around South C.</p>
+    </div>
+
+    <div class="feature-card" onclick="goToSection('emergency')">
+        <div class="feature-icon">🚨</div>
+        <h3>Emergency</h3>
+        <p>Quick access to important emergency information.</p>
+    </div>
+
+    <div class="feature-card" onclick="goToSection('contact')">
+        <div class="feature-icon">📩</div>
+        <h3>Contact</h3>
+        <p>Send feedback and community suggestions.</p>
+    </div>
+
+</section>
+        <section class="welcome">
+            <h2>South C Connect</h2>
+
+            <p>
+                Discover what's happening in South C, find local
+                businesses and services, and stay connected with
+                your community.
+            </p>
+        </section>
+
+        <section id="news" class="section">
+            <h2>📰 Latest News</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Community Updates</h3>
+                    <p>Stay informed about important local updates.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Local Activities</h3>
+                    <p>Discover activities happening around South C.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="events" class="section">
+            <h2>📅 Upcoming Events</h2>
+
+            <div class="card">
+                <h3>Community Events</h3>
+                <p>Events and activities will appear here.</p>
+            </div>
+        </section>
+
+        <section id="businesses" class="section">
+            <h2>🏪 Local Businesses</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Restaurants</h3>
+                    <p>Find restaurants and food spots in South C.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Shops</h3>
+                    <p>Discover local shops and businesses.</p>
+                </div>
+
+            </div>
+        </section>
+      <section id="directory" class="section">
+
+    <h2>📍 South C Directory</h2>
+
+    <p class="directory-intro">
+        Find useful places and services around South C.
+    </p>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search South C...">
+
+    <div class="cards" id="directoryList">
+
+        <div class="card directory-item">
+            <h3>🏥 Healthcare</h3>
+            <p>Hospitals, clinics and pharmacies.</p>
+        </div>
+
+        <div class="card directory-item">
+            <h3>🍔 Restaurants</h3>
+            <p>Food spots and restaurants around South C.</p>
+        </div>
+
+        <div class="card directory-item">
+            <h3>🏫 Schools</h3>
+            <p>Schools and educational institutions.</p>
+        </div>
+
+        <div class="card directory-item">
+            <h3>⛪ Churches</h3>
+            <p>Churches and places of worship.</p>
+        </div>
+
+        <div class="card directory-item">
+            <h3>⛽ Fuel Stations</h3>
+            <p>Fuel stations and automotive services.</p>
+        </div>
+
+        <div class="card directory-item">
+            <h3>🛒 Shops</h3>
+            <p>Local shops and businesses.</p>
+        </div>
+
+    </div>
+
+      </section>
+<section id="places" class="section">
+
+    <h2>📍 Places Around South C</h2>
+
+    <p class="directory-intro">
+        Find useful places around the South C community.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🏥 The Nairobi South Hospital</h3>
+            <p>Healthcare facility in South C.</p>
+            <button onclick="openMap('The Nairobi South Hospital, South C, Nairobi')">
+                View on Map
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>🏥 Beleview South Hospital</h3>
+            <p>Healthcare facility around Ole Shapara Avenue.</p>
+            <button onclick="openMap('Beleview South Hospital, South C, Nairobi')">
+                View on Map
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>🛒 South C Shopping Centre</h3>
+            <p>A local shopping and services centre.</p>
+            <button onclick="openMap('South C Shopping Centre, Nairobi')">
+                View on Map
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>🏫 SAF International School</h3>
+            <p>Educational institution on Five Star Road.</p>
+            <button onclick="openMap('SAF International School, South C, Nairobi')">
+                View on Map
+            </button>
+        </div>
+
+    </div>
+
+</section>
+      <section id="events" class="section">
+
+    <h2>📅 South C Events</h2>
+
+    <p class="directory-intro">
+        Discover activities and events happening around South C.
+    </p>
+
+    <div class="cards">
+
+        <div class="card event-card">
+            <div class="event-date">
+                <strong>EVENT</strong>
+            </div>
+
+            <h3>🏃 Community Sports Day</h3>
+
+            <p>
+                A community sports and fitness event for young people
+                and residents.
+            </p>
+
+            <p><strong>📍 Location:</strong> South C</p>
+
+            <p><strong>🕐 Time:</strong> To be announced</p>
+        </div>
+
+        <div class="card event-card">
+            <div class="event-date">
+                <strong>COMMUNITY</strong>
+            </div>
+
+            <h3>🤝 Community Meeting</h3>
+
+            <p>
+                Community members can share ideas and discuss
+                local matters.
+            </p>
+
+            <p><strong>📍 Location:</strong> South C</p>
+
+            <p><strong>🕐 Time:</strong> To be announced</p>
+        </div>
+
+        <div class="card event-card">
+            <div class="event-date">
+                <strong>YOUTH</strong>
+            </div>
+
+            <h3>🎮 Youth Activity Day</h3>
+
+            <p>
+                A day of games, skills and activities for young people.
+            </p>
+
+            <p><strong>📍 Location:</strong> South C</p>
+
+            <p><strong>🕐 Time:</strong> To be announced</p>
+        </div>
+
+    </div>
+
+      </section>
+      <section id="news" class="section">
+
+    <h2>📰 South C News & Announcements</h2>
+
+    <p class="directory-intro">
+        Important community information and announcements.
+    </p>
+
+    <div class="cards">
+
+        <div class="card news-card">
+            <span class="news-category">COMMUNITY</span>
+
+            <h3>Community Updates</h3>
+
+            <p>
+                Important information for residents will be posted
+                here.
+            </p>
+
+            <small>Posted: October 2026</small>
+        </div>
+
+        <div class="card news-card">
+            <span class="news-category">YOUTH</span>
+
+            <h3>Youth Opportunities</h3>
+
+            <p>
+                Find information about youth activities, training
+                and opportunities in the community.
+            </p>
+
+            <small>Posted: October 2026</small>
+        </div>
+
+        <div class="card news-card">
+            <span class="news-category">NOTICE</span>
+
+            <h3>Community Notice</h3>
+
+            <p>
+                Important notices and public announcements can be
+                displayed here.
+            </p>
+
+            <small>Posted: October 2026</small>
+        </div>
+
+    </div>
+
+      </section>
+      <section id="emergency" class="section">
+
+    <h2>🚨 Emergency & Important Contacts</h2>
+
+    <p class="directory-intro">
+        Quick access to important emergency services.
+    </p>
+
+    <div class="cards">
+
+        <div class="card emergency-card">
+            <h3>🚑 Emergency Services</h3>
+            <p>For urgent emergencies, contact the appropriate emergency service.</p>
+
+            <a href="tel:999" class="call-button">
+                📞 Call 999
+            </a>
+        </div>
+
+        <div class="card emergency-card">
+            <h3>🚓 Police</h3>
+            <p>Contact the police when immediate assistance is required.</p>
+
+            <a href="tel:999" class="call-button">
+                📞 Call 999
+            </a>
+        </div>
+
+        <div class="card emergency-card">
+            <h3>🏥 Healthcare</h3>
+            <p>For medical emergencies, seek professional medical assistance immediately.</p>
+
+            <a href="tel:999" class="call-button">
+                📞 Emergency
+            </a>
+        </div>
+
+    </div>
+
+      </section>
+      <section id="contact" class="section">
+
+    <h2>📩 Contact South C Connect</h2>
+
+    <p class="directory-intro">
+        Have an idea, announcement or community feedback?
+        Send us a message.
+    </p>
+
+    <form id="contactForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your email"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="Write your message..."
+            rows="6"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+    <p id="formMessage"></p>
+
+      </section>
+      <section id="gallery" class="section">
+
+    <h2>📸 South C Gallery</h2>
+
+    <p class="directory-intro">
+        Photos and moments from around the South C community.
+    </p>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80"
+                 alt="Community event">
+            <h3>Community Life</h3>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80"
+                 alt="People together">
+            <h3>People & Community</h3>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80"
+                 alt="Young people">
+            <h3>Youth</h3>
+        </div>
+
+    </div>
+
+      </section>
+      <section id="about" class="section about-section">
+    <h2>ℹ️ About South C Connect</h2>
+
+    <div class="about-content">
+        <p>
+            South C Connect is a community-focused website designed to make
+            useful local information easier to find. The platform brings
+            together community news, events, businesses, services and
+            important places around South C.
+        </p>
+
+        <div class="about-points">
+
+            <div class="about-point">
+                <span>📍</span>
+                <h3>Local</h3>
+                <p>
+                    Information is organized around the South C community.
+                </p>
+            </div>
+
+            <div class="about-point">
+                <span>🤝</span>
+                <h3>Community</h3>
+                <p>
+                    The platform is designed to help residents stay connected.
+                </p>
+            </div>
+
+            <div class="about-point">
+                <span>🔎</span>
+                <h3>Useful</h3>
+                <p>
+                    Find services, places, events and other useful information.
+                </p>
+            </div>
+
+        </div>
+    </div>
+      </section>
+        <section id="services" class="section">
+            <h2>🏥 Community Services</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Healthcare</h3>
+                    <p>Find healthcare facilities and pharmacies.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Schools</h3>
+                    <p>Explore schools and educational services.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 South C Connect</p>
+        <p>Built for the South C community 🇰🇪</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
