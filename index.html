@@ -31,15 +31,15 @@
         
             <button class="menu-button" onclick="toggleMenu()">☰</button>
 
-< id="mainNav">
+<nav id="mainNav">
     <a href="#home">Home</a>
     <a href="#news">News</a>
     <a href="#events">Events</a>
     <a href="#directory">Directory</a>
     <a href="#places">Places</a>
     <a href="#emergency">Emergency</a>
-  
-<a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
 </nav>
 </header>
 
@@ -436,7 +436,36 @@
     </form>
 
     <p id="formMessage"></p>
+<section id="about" class="section about-section">
+    <h2>ℹ️ About South C Connect</h2>
 
+    <div class="about-content">
+        <p>
+            South C Connect is a community-focused platform designed to
+            make useful local information easier to find.
+        </p>
+
+        <div class="about-points">
+            <div>
+                <span>📍</span>
+                <h3>Local</h3>
+                <p>Focused on information relevant to the South C community.</p>
+            </div>
+
+            <div>
+                <span>🤝</span>
+                <h3>Community</h3>
+                <p>A place to discover community information and opportunities.</p>
+            </div>
+
+            <div>
+                <span>🔎</span>
+                <h3>Useful</h3>
+                <p>Find services, places, events and other useful information.</p>
+            </div>
+        </div>
+    </div>
+</section>
       </section>
       <section id="gallery" class="section">
 
@@ -470,6 +499,29 @@
 
       </section>
       <section id="about" class="section about-section">
+        <section id="contact" class="section">
+    <h2>📩 Contact South C Connect</h2>
+
+    <p class="directory-intro">
+        Have an idea, announcement or community feedback?
+        Send us a message.
+    </p>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <input type="email" id="email" placeholder="Your email" required>
+
+        <textarea id="message"
+                  placeholder="Write your message..."
+                  rows="6"
+                  required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="formMessage"></p>
+        </section>
     <h2>ℹ️ About South C Connect</h2>
 
     <div class="about-content">
