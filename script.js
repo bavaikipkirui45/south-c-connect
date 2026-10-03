@@ -35,6 +35,17 @@ function toggleMenu() {
 }
 const contactForm = document.getElementById("contactForm");
 
+if (contactForm) {
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("formMessage").textContent =
+            "Thank you! Your message has been received.";
+
+        contactForm.reset();
+    });
+}
+
 contactForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
@@ -51,6 +62,23 @@ function goToSection(sectionId) {
     });
 }
 const backToTop = document.getElementById("backToTop");
+
+if (backToTop) {
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 400) {
+            backToTop.style.display = "block";
+        } else {
+            backToTop.style.display = "none";
+        }
+    });
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 
 window.addEventListener("scroll", function () {
     if (window.scrollY > 400) {
